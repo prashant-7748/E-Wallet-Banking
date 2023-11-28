@@ -1,0 +1,1025 @@
+---
+modelFingerprint: "6B873D6200E217DCE6F7E05F6EE1147B"
+methods:
+- method:
+    name: "createUser"
+    returnType: "com.fullstack.project_fullstack.model.User"
+    signature: "createUser(com.fullstack.project_fullstack.model.User) : com.fullstack.project_fullstack.model.User"
+    parametersTypes:
+    - "com.fullstack.project_fullstack.model.User"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "createUserTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.fullstack.project_fullstack.repository.UserRepository,com.fullstack.project_fullstack.model.SecurityConfig)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "5F7638C50D105D69C7DB7CAC773052FA"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "70BDB8249EC5C03A26EAA55FDDBF96BB"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.UserServiceImpl"
+          parameters:
+          - name: "userRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+              uuid: "<init>_userRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "securityConfig"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.model.SecurityConfig"
+              uuid: "<init>_securityConfig1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "com.fullstack.project_fullstack.Services.UserServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "user"
+      modelFingerprint: "D6E77206C129433C5E38B518FB0B84B3"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.User"
+        uuid: "createUser_user1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "userRepository"
+      modelFingerprint: "C69205BAE09748F944F61D2F48231B1D"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+        uuid: "<init>_userRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.userRepository"
+        name: "save"
+        parameters:
+        - value:
+            sapientType: "MOCK"
+            valueType: "com.fullstack.project_fullstack.model.User"
+            uuid: "createUser_user1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "save(User): User"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "com.fullstack.project_fullstack.model.User"
+          uuid: "createUser_user2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.User"
+        uuid: "createUser_user2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "c21d3ed3-7747-39fb-bfef-184c2bc23343"
+    deleted: false
+    disabled: false
+- method:
+    name: "getUser"
+    returnType: "com.fullstack.project_fullstack.model.User"
+    signature: "getUser(java.lang.String) : com.fullstack.project_fullstack.model.User"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getUserTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.fullstack.project_fullstack.repository.UserRepository,com.fullstack.project_fullstack.model.SecurityConfig)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "4B5705D329B3EC9D74B28C015E24F186"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "70BDB8249EC5C03A26EAA55FDDBF96BB"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.UserServiceImpl"
+          parameters:
+          - name: "userRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+              uuid: "<init>_userRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "securityConfig"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.model.SecurityConfig"
+              uuid: "<init>_securityConfig1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "com.fullstack.project_fullstack.Services.UserServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "id"
+      modelFingerprint: "7CBC2DF433F36FFD5B9808ED9A77C50A"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "id1"
+        valueType: "java.lang.String"
+        uuid: "getUser_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "userRepository"
+      modelFingerprint: "F29B6B64653461B363154E74A510B73A"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+        uuid: "<init>_userRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.userRepository"
+        name: "findById"
+        parameters:
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "id1"
+            valueType: "java.lang.String"
+            uuid: "getUser_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findById(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "NULL"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          uuid: "getUser_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        valueType: "com.fullstack.project_fullstack.model.User"
+        uuid: "nullcheckCast"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: true
+      staticReadMethodForField: false
+    uuid: "44f00673-e6a8-39d4-849c-3bc2696304ce"
+    deleted: false
+    disabled: false
+- method:
+    name: "getAllUsers"
+    returnType: "java.util.List"
+    signature: "getAllUsers() : java.util.List<com.fullstack.project_fullstack.model.User>"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getAllUsersTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.fullstack.project_fullstack.repository.UserRepository,com.fullstack.project_fullstack.model.SecurityConfig)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "4F97EB3334D0777B421D765F25A72B51"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "70BDB8249EC5C03A26EAA55FDDBF96BB"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.UserServiceImpl"
+          parameters:
+          - name: "userRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+              uuid: "<init>_userRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "securityConfig"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.model.SecurityConfig"
+              uuid: "<init>_securityConfig1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "com.fullstack.project_fullstack.Services.UserServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "userRepository"
+      modelFingerprint: "163B10906A1CF43B0DFD7A50524D61C4"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+        uuid: "<init>_userRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.userRepository"
+        name: "findAll"
+        parameters: []
+        signature: "findAll(): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            parameters: []
+            values: []
+          valueType: "java.util.List"
+          uuid: "getAllUsers_list1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "userRepository"
+      modelFingerprint: "5D91F8B45CE2A4DB8AD0C2E41B0AB53B"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+        uuid: "<init>_userRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.userRepository"
+        name: "findAll"
+        parameters: []
+        signature: "findAll(): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            parameters: []
+            values: []
+          valueType: "java.util.List"
+          genericValueType: "com.fullstack.project_fullstack.model.User"
+          uuid: "getAllUsers_list2"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          parameters: []
+          values: []
+        valueType: "java.util.List"
+        genericValueType: "com.fullstack.project_fullstack.model.User"
+        uuid: "getAllUsers_list2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "480339a7-d9be-39c4-82a5-aa02ed83fa46"
+    deleted: false
+    disabled: false
+- method:
+    name: "login"
+    returnType: "com.fullstack.project_fullstack.model.User"
+    signature: "login(java.lang.String,java.lang.String) : com.fullstack.project_fullstack.model.User"
+    parametersTypes:
+    - "java.lang.String"
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "loginWhenUserIsNullThrowsInvalidCredentialsException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.fullstack.project_fullstack.repository.UserRepository,com.fullstack.project_fullstack.model.SecurityConfig)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "F399669330FF75F51C38D28A7169A247"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "70BDB8249EC5C03A26EAA55FDDBF96BB"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.UserServiceImpl"
+          parameters:
+          - name: "userRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+              uuid: "<init>_userRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "securityConfig"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.model.SecurityConfig"
+              uuid: "<init>_securityConfig1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "com.fullstack.project_fullstack.Services.UserServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "email"
+      modelFingerprint: "09D0CDC0212CCCF8595EAED38F9F89E7"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "email1"
+        valueType: "java.lang.String"
+        uuid: "login_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "password"
+      modelFingerprint: "C36E342C66024982F418A286EF92D50E"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "password1"
+        valueType: "java.lang.String"
+        uuid: "login_string2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "userRepository"
+      modelFingerprint: "60ABB7906D8B358D036DF220C80BF443"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+        uuid: "<init>_userRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.userRepository"
+        name: "findByEmail"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "email1"
+            valueType: "java.lang.String"
+            uuid: "login_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByEmail(String): User"
+        returnValue:
+          sapientType: "NULL"
+          valueType: "com.fullstack.project_fullstack.model.User"
+          uuid: "login_user1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.exception.InvalidCredentialsException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Invalid credentials"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        suggestedContent: !<new>
+          target: "com.fullstack.project_fullstack.exception.InvalidCredentialsException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Invalid credentials"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "com.fullstack.project_fullstack.exception.InvalidCredentialsException"
+        uuid: "login_invalidCredentialsException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "086b307f-2e9e-36f6-aa99-ae2022b0b148"
+    deleted: false
+    disabled: false
+  - pathId: "path3"
+    pathIdForUser: "path2"
+    testPathName: "loginWhenPasswordUtilsVerifyPasswordPasswordUserGetPassword"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.fullstack.project_fullstack.repository.UserRepository,com.fullstack.project_fullstack.model.SecurityConfig)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "8102608E5C4D60FE4CC82AC0203766B2"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "70BDB8249EC5C03A26EAA55FDDBF96BB"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.UserServiceImpl"
+          parameters:
+          - name: "userRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+              uuid: "<init>_userRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "securityConfig"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.model.SecurityConfig"
+              uuid: "<init>_securityConfig1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "com.fullstack.project_fullstack.Services.UserServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "email"
+      modelFingerprint: "09D0CDC0212CCCF8595EAED38F9F89E7"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "email1"
+        valueType: "java.lang.String"
+        uuid: "login_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "password"
+      modelFingerprint: "C36E342C66024982F418A286EF92D50E"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "password1"
+        valueType: "java.lang.String"
+        uuid: "login_string2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "userRepository"
+      modelFingerprint: "60ABB7906D8B358D036DF220C80BF443"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+        uuid: "<init>_userRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.userRepository"
+        name: "findByEmail"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "email1"
+            valueType: "java.lang.String"
+            uuid: "login_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByEmail(String): User"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "com.fullstack.project_fullstack.model.User"
+          uuid: "login_user1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "user"
+      modelFingerprint: "CF3B14AB46485600D08D83423EE13458"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.User"
+        uuid: "login_user1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "user"
+        name: "getPassword"
+        parameters: []
+        signature: "getPassword(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getPassword1"
+          valueType: "java.lang.String"
+          uuid: "login_string3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "STATIC"
+      name: "PasswordUtils"
+      modelFingerprint: "5FDB57CDF822B9DF220E909768D1E6B1"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "com.fullstack.project_fullstack.model.PasswordUtils"
+        uuid: "passwordUtils"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "com.fullstack.project_fullstack.model.PasswordUtils"
+        name: "verifyPassword"
+        parameters:
+        - name: "password"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "password1"
+            valueType: "java.lang.String"
+            uuid: "login_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "hashedPassword"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getPassword1"
+            valueType: "java.lang.String"
+            uuid: "login_string3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "verifyPassword(String,String): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "login_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.User"
+        uuid: "login_user1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "b21effec-781a-3a35-9e18-55f943a711c3"
+    deleted: false
+    disabled: false
+  - pathId: "path2"
+    pathIdForUser: "path3"
+    testPathName: "loginWhenPasswordUtilsNotVerifyPasswordPasswordUserGetPasswordThrowsInvalidCredentialsException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(com.fullstack.project_fullstack.repository.UserRepository,com.fullstack.project_fullstack.model.SecurityConfig)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "12F8304738BB5151E9D44AC6CE3E4A21"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "70BDB8249EC5C03A26EAA55FDDBF96BB"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.UserServiceImpl"
+          parameters:
+          - name: "userRepository"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+              uuid: "<init>_userRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "securityConfig"
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.model.SecurityConfig"
+              uuid: "<init>_securityConfig1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "com.fullstack.project_fullstack.Services.UserServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "email"
+      modelFingerprint: "09D0CDC0212CCCF8595EAED38F9F89E7"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "email1"
+        valueType: "java.lang.String"
+        uuid: "login_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "password"
+      modelFingerprint: "C36E342C66024982F418A286EF92D50E"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "A"
+        suggestedContent: !<regular>
+          value: "A"
+        valueType: "java.lang.String"
+        uuid: "login_string2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "userRepository"
+      modelFingerprint: "60ABB7906D8B358D036DF220C80BF443"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+        uuid: "<init>_userRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.userRepository"
+        name: "findByEmail"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "email1"
+            valueType: "java.lang.String"
+            uuid: "login_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByEmail(String): User"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "com.fullstack.project_fullstack.model.User"
+          uuid: "login_user1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "user"
+      modelFingerprint: "CF3B14AB46485600D08D83423EE13458"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.User"
+        uuid: "login_user1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "user"
+        name: "getPassword"
+        parameters: []
+        signature: "getPassword(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "B"
+          suggestedContent: !<regular>
+            value: "B"
+          valueType: "java.lang.String"
+          uuid: "login_string3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "STATIC"
+      name: "PasswordUtils"
+      modelFingerprint: "5FDB57CDF822B9DF220E909768D1E6B1"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "com.fullstack.project_fullstack.model.PasswordUtils"
+        uuid: "passwordUtils"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "com.fullstack.project_fullstack.model.PasswordUtils"
+        name: "verifyPassword"
+        parameters:
+        - name: "password"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "login_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "hashedPassword"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "B"
+            suggestedContent: !<regular>
+              value: "B"
+            valueType: "java.lang.String"
+            uuid: "login_string3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "verifyPassword(String,String): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          suggestedContent: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "login_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.exception.InvalidCredentialsException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Invalid credentials"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        suggestedContent: !<new>
+          target: "com.fullstack.project_fullstack.exception.InvalidCredentialsException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Invalid credentials"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "com.fullstack.project_fullstack.exception.InvalidCredentialsException"
+        uuid: "login_invalidCredentialsException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "6c4d48a3-1cbc-3829-bc91-9a8320ec2322"
+    deleted: false
+    disabled: false

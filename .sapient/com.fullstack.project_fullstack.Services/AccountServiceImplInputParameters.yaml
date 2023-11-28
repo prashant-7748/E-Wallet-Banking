@@ -1,0 +1,3060 @@
+---
+modelFingerprint: "82AD9605F4A0AA07BD0BF90CC284B848"
+methods:
+- method:
+    name: "getBalance"
+    returnType: "double"
+    signature: "getBalance(java.lang.String) : double"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path2"
+    pathIdForUser: "path1"
+    testPathName: "getBalanceWhenOptionalAccountIsPresent"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "BAE384E11E2405211FDA1033A75DF3A8"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            accountRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+              uuid: "getBalance_accountRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "account"
+      modelFingerprint: "044AB610356433B73CEDA72357374622"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "account1"
+        valueType: "java.lang.String"
+        uuid: "getBalance_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "accountRepository"
+      modelFingerprint: "48AE96651445C1FA45B452A0E8476730"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+        uuid: "getBalance_accountRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.accountRepository"
+        name: "findByAccountNumber"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "account1"
+            valueType: "java.lang.String"
+            uuid: "getBalance_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByAccountNumber(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.model.Account"
+              uuid: "getBalance_account1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "com.fullstack.project_fullstack.model.Account"
+          uuid: "getBalance_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "D9D6DE7A933075DFA5DDF50C820766DB"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "getBalance_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "com.fullstack.project_fullstack.model.Account"
+        name: "getBalance"
+        parameters: []
+        signature: "getBalance(): double"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 0.0
+          valueType: "double"
+          uuid: "getBalance_double1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0.0
+        valueType: "double"
+        uuid: "getBalance_double1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "a49d948d-220e-3fc1-b67f-f86a5283cec4"
+    deleted: false
+    disabled: false
+  - pathId: "path1"
+    pathIdForUser: "path2"
+    testPathName: "getBalanceWhenOptionalAccountNotIsPresentThrowsRuntimeException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "C5D583126F910E267F478408C56A3F64"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            accountRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+              uuid: "getBalance_accountRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "account"
+      modelFingerprint: "044AB610356433B73CEDA72357374622"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "account1"
+        valueType: "java.lang.String"
+        uuid: "getBalance_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "accountRepository"
+      modelFingerprint: "0517C02693A83505DF0B9FC4C4DE44D5"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+        uuid: "getBalance_accountRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.accountRepository"
+        name: "findByAccountNumber"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "account1"
+            valueType: "java.lang.String"
+            uuid: "getBalance_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByAccountNumber(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "NULL"
+              valueType: "com.fullstack.project_fullstack.model.Account"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "com.fullstack.project_fullstack.model.Account"
+          uuid: "getBalance_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.RuntimeException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Account not found."
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        suggestedContent: !<new>
+          target: "java.lang.RuntimeException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Account not found."
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "java.lang.RuntimeException"
+        uuid: "getBalance_runtimeException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "ce540cee-da32-3160-89f8-9884f0d95811"
+    deleted: false
+    disabled: false
+- method:
+    name: "getAllAccounts"
+    returnType: "java.util.List"
+    signature: "getAllAccounts() : java.util.List<com.fullstack.project_fullstack.model.Account>"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getAllAccountsTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "A2F6A35113B4226D90DAAE820F0FE170"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            accountRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+              uuid: "getBalance_accountRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "accountRepository"
+      modelFingerprint: "9D22CB18E2BC94AA1FE87ADD254AC2DF"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+        uuid: "getBalance_accountRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.accountRepository"
+        name: "findAll"
+        parameters: []
+        signature: "findAll(): List"
+        returnValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            parameters: []
+            values: []
+          valueType: "java.util.List"
+          genericValueType: "com.fullstack.project_fullstack.model.Account"
+          uuid: "getAllAccounts_list1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          parameters: []
+          values: []
+        valueType: "java.util.List"
+        genericValueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "getAllAccounts_list1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "11f60e93-2bea-3be0-8428-5a77ebc5e406"
+    deleted: false
+    disabled: false
+- method:
+    name: "getAccountById"
+    returnType: "com.fullstack.project_fullstack.model.Account"
+    signature: "getAccountById(java.lang.String) : com.fullstack.project_fullstack.model.Account"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path2"
+    pathIdForUser: "path1"
+    testPathName: "getAccountByIdWhenOptionalAccountNotIsPresentThrowsAccountNotFoundException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "FD4F80187534416D80F719950DF7E148"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            accountRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+              uuid: "getBalance_accountRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "id"
+      modelFingerprint: "7CBC2DF433F36FFD5B9808ED9A77C50A"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "B"
+        suggestedContent: !<regular>
+          value: "B"
+        valueType: "java.lang.String"
+        uuid: "getAccountById_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "accountRepository"
+      modelFingerprint: "53E8EC8CAA1F141BEC27A11E631393B4"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+        uuid: "getBalance_accountRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.accountRepository"
+        name: "findById"
+        parameters:
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "B"
+            suggestedContent: !<regular>
+              value: "B"
+            valueType: "java.lang.String"
+            uuid: "getAccountById_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findById(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "NULL"
+              valueType: "com.fullstack.project_fullstack.model.Account"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "com.fullstack.project_fullstack.model.Account"
+          uuid: "getAccountById_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.exception.AccountNotFoundException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Account not found with id: B"
+              suggestedContent: !<regular>
+                value: "Account not found with id: B"
+              valueType: "java.lang.String"
+              uuid: "getAccountById_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        suggestedContent: !<new>
+          target: "com.fullstack.project_fullstack.exception.AccountNotFoundException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "Account not found with id: B"
+              valueType: "java.lang.String"
+              uuid: "getAccountById_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "com.fullstack.project_fullstack.exception.AccountNotFoundException"
+        uuid: "getAccountById_accountNotFoundException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "5b83c6d8-d8e8-3e01-a534-3defc6875d3b"
+    deleted: false
+    disabled: false
+  - pathId: "path1"
+    pathIdForUser: "path2"
+    testPathName: "getAccountByIdWhenOptionalAccountIsPresent"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "84EF43E50DD04375F90AA382540DB12D"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            accountRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+              uuid: "getBalance_accountRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "id"
+      modelFingerprint: "7CBC2DF433F36FFD5B9808ED9A77C50A"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "id1"
+        valueType: "java.lang.String"
+        uuid: "getAccountById_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "accountRepository"
+      modelFingerprint: "29A38E5F8881BAE300722E39DF3772DF"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+        uuid: "getBalance_accountRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.accountRepository"
+        name: "findById"
+        parameters:
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "id1"
+            valueType: "java.lang.String"
+            uuid: "getAccountById_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findById(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.model.Account"
+              uuid: "getAccountById_account1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "com.fullstack.project_fullstack.model.Account"
+          uuid: "getAccountById_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "getAccountById_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "bc0b60fe-dc6b-30c3-a70e-90b7c3ace08e"
+    deleted: false
+    disabled: false
+- method:
+    name: "createAccount"
+    returnType: "com.fullstack.project_fullstack.model.Account"
+    signature: "createAccount(com.fullstack.project_fullstack.model.Account) : com.fullstack.project_fullstack.model.Account"
+    parametersTypes:
+    - "com.fullstack.project_fullstack.model.Account"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "createAccountTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "DC97B716FFA0E0EF118A08CB67D29E85"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            accountRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+              uuid: "getBalance_accountRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "account"
+      modelFingerprint: "B7E6812D4A9BF13B23AED1BC028BC4D9"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "createAccount_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "accountRepository"
+      modelFingerprint: "180713A0D255D0FDEE6928EFEB53896E"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+        uuid: "getBalance_accountRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.accountRepository"
+        name: "save"
+        parameters:
+        - value:
+            sapientType: "MOCK"
+            valueType: "com.fullstack.project_fullstack.model.Account"
+            uuid: "createAccount_account1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "save(Account): Account"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "com.fullstack.project_fullstack.model.Account"
+          uuid: "createAccount_account2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "createAccount_account2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "6914da9c-9057-39cb-a8ab-3b7ec19055a3"
+    deleted: false
+    disabled: false
+- method:
+    name: "deleteAccount"
+    returnType: "void"
+    signature: "deleteAccount(java.lang.String) : void"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path2"
+    pathIdForUser: "path1"
+    testPathName: "deleteAccountWhenOptionalAccountNotIsPresentThrowsAccountNotFoundException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "FD4F80187534416D80F719950DF7E148"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            accountRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+              uuid: "getBalance_accountRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "id"
+      modelFingerprint: "7CBC2DF433F36FFD5B9808ED9A77C50A"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "B"
+        suggestedContent: !<regular>
+          value: "B"
+        valueType: "java.lang.String"
+        uuid: "deleteAccount_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "accountRepository"
+      modelFingerprint: "53E8EC8CAA1F141BEC27A11E631393B4"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+        uuid: "getBalance_accountRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.accountRepository"
+        name: "findById"
+        parameters:
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "B"
+            suggestedContent: !<regular>
+              value: "B"
+            valueType: "java.lang.String"
+            uuid: "deleteAccount_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findById(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "NULL"
+              valueType: "com.fullstack.project_fullstack.model.Account"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "com.fullstack.project_fullstack.model.Account"
+          uuid: "deleteAccount_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.exception.AccountNotFoundException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Account not found with id: B"
+              suggestedContent: !<regular>
+                value: "Account not found with id: B"
+              valueType: "java.lang.String"
+              uuid: "deleteAccount_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        suggestedContent: !<new>
+          target: "com.fullstack.project_fullstack.exception.AccountNotFoundException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "Account not found with id: B"
+              valueType: "java.lang.String"
+              uuid: "deleteAccount_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "com.fullstack.project_fullstack.exception.AccountNotFoundException"
+        uuid: "deleteAccount_accountNotFoundException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "c7f67d17-d7c0-32bb-aeec-17fd869b6f10"
+    deleted: false
+    disabled: false
+  - pathId: "path1"
+    pathIdForUser: "path2"
+    testPathName: "deleteAccountWhenOptionalAccountIsPresent"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "471724B70106D9F5ABCBD8B47017216E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            accountRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+              uuid: "getBalance_accountRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "id"
+      modelFingerprint: "7CBC2DF433F36FFD5B9808ED9A77C50A"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "id1"
+        valueType: "java.lang.String"
+        uuid: "deleteAccount_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "accountRepository"
+      modelFingerprint: "113AEC7E7A68431E76184B4D2E1F4DC3"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+        uuid: "getBalance_accountRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.accountRepository"
+        name: "findById"
+        parameters:
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "id1"
+            valueType: "java.lang.String"
+            uuid: "deleteAccount_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findById(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.model.Account"
+              uuid: "deleteAccount_account1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "com.fullstack.project_fullstack.model.Account"
+          uuid: "deleteAccount_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "accountRepository"
+      modelFingerprint: "50149944CEE9DD809D03AB362C1B618D"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+        uuid: "getBalance_accountRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.accountRepository"
+        name: "delete"
+        parameters:
+        - value:
+            sapientType: "MOCK"
+            valueType: "com.fullstack.project_fullstack.model.Account"
+            uuid: "deleteAccount_account1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "delete(Account): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "52084373-1d16-379f-a643-22d247498fe6"
+    deleted: false
+    disabled: false
+- method:
+    name: "transactions"
+    returnType: "void"
+    signature: "transactions(com.fullstack.project_fullstack.model.Account,com.fullstack.project_fullstack.model.Account,java.lang.Double)\
+      \ : void"
+    throwsExceptions:
+    - "java.lang.Exception"
+    parametersTypes:
+    - "com.fullstack.project_fullstack.model.Account"
+    - "com.fullstack.project_fullstack.model.Account"
+    - "java.lang.Double"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "transactionsWhenUserRepositoryFindByAccountNumberSenderGetAccountNumberNotIsPresentThrowsException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "615B8A5BC17E215B3EFA17D76517539A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            userRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+              uuid: "transactions_userRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "sender"
+      modelFingerprint: "4389988EC9048BA71FD4CF16594B4757"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "receiver"
+      modelFingerprint: "D6BCCC817F475ABBA5E4590578B27075"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "amount"
+      modelFingerprint: "0A3D2731A6D32217742018D406EC41CC"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0.0
+        valueType: "java.lang.Double"
+        uuid: "transactions_double1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "sender"
+      modelFingerprint: "2763E9C8DCD83AFAFF6611A832F94217"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "sender"
+        name: "getAccountNumber"
+        parameters: []
+        signature: "getAccountNumber(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getAccountNumber1"
+          valueType: "java.lang.String"
+          uuid: "transactions_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "userRepository"
+      modelFingerprint: "B73B09CD7C816D93D327D23E916DF426"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+        uuid: "transactions_userRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.userRepository"
+        name: "findByAccountNumber"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getAccountNumber1"
+            valueType: "java.lang.String"
+            uuid: "transactions_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByAccountNumber(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "NULL"
+              valueType: "java.lang.Object"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "java.lang.Object"
+          uuid: "transactions_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.Exception"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Invalid Account Details"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        suggestedContent: !<new>
+          target: "java.lang.Exception"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Invalid Account Details"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "java.lang.Exception"
+        uuid: "transactions_exception1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "cd589744-2767-3b96-b095-a58fa29f2b8c"
+    deleted: false
+    disabled: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "transactionsWhenUserRepositoryFindByAccountNumberReceiverGetAccountNumberNotIsPresentThrowsException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "983D30AA033C9C94A904B43A6FEACBAE"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            userRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+              uuid: "transactions_userRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "sender"
+      modelFingerprint: "4389988EC9048BA71FD4CF16594B4757"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "receiver"
+      modelFingerprint: "D6BCCC817F475ABBA5E4590578B27075"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "amount"
+      modelFingerprint: "0A3D2731A6D32217742018D406EC41CC"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0.0
+        valueType: "java.lang.Double"
+        uuid: "transactions_double1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "sender"
+      modelFingerprint: "2763E9C8DCD83AFAFF6611A832F94217"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "sender"
+        name: "getAccountNumber"
+        parameters: []
+        signature: "getAccountNumber(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getAccountNumber1"
+          valueType: "java.lang.String"
+          uuid: "transactions_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "userRepository"
+      modelFingerprint: "BEAB9E5527162FE61D79EC3D2276DEA2"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+        uuid: "transactions_userRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.userRepository"
+        name: "findByAccountNumber"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getAccountNumber1"
+            valueType: "java.lang.String"
+            uuid: "transactions_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByAccountNumber(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "MOCK"
+              valueType: "java.lang.Object"
+              uuid: "transactions_optional1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "java.lang.Object"
+          uuid: "transactions_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "receiver"
+      modelFingerprint: "2763E9C8DCD83AFAFF6611A832F94217"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "receiver"
+        name: "getAccountNumber"
+        parameters: []
+        signature: "getAccountNumber(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getAccountNumber1"
+          valueType: "java.lang.String"
+          uuid: "transactions_string2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "userRepository"
+      modelFingerprint: "B73B09CD7C816D93D327D23E916DF426"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+        uuid: "transactions_userRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.userRepository"
+        name: "findByAccountNumber"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getAccountNumber1"
+            valueType: "java.lang.String"
+            uuid: "transactions_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByAccountNumber(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "NULL"
+              valueType: "java.lang.Object"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "java.lang.Object"
+          uuid: "transactions_optional2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.Exception"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Invalid Account Details"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        suggestedContent: !<new>
+          target: "java.lang.Exception"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Invalid Account Details"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "java.lang.Exception"
+        uuid: "transactions_exception1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "0b830a5c-5e24-3f89-a64b-0e83ed8f5e7d"
+    deleted: false
+    disabled: false
+  - pathId: "path4"
+    pathIdForUser: "path3"
+    testPathName: "transactionsWhenSenderGetBalanceGreaterThanOrEqualsToAmount"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "89BA931696F79FAD69FD476EC33FC070"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            transactionService:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.Services.TransactionService"
+              uuid: "transactions_transactionService1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            userRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+              uuid: "transactions_userRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            accountRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+              uuid: "getBalance_accountRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "sender"
+      modelFingerprint: "4389988EC9048BA71FD4CF16594B4757"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "receiver"
+      modelFingerprint: "D6BCCC817F475ABBA5E4590578B27075"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "amount"
+      modelFingerprint: "0A3D2731A6D32217742018D406EC41CC"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0.0
+        suggestedContent: !<regular>
+          value: 0.0
+        valueType: "java.lang.Double"
+        uuid: "transactions_double1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "sender"
+      modelFingerprint: "2763E9C8DCD83AFAFF6611A832F94217"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "sender"
+        name: "getAccountNumber"
+        parameters: []
+        signature: "getAccountNumber(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getAccountNumber1"
+          valueType: "java.lang.String"
+          uuid: "transactions_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "userRepository"
+      modelFingerprint: "BEAB9E5527162FE61D79EC3D2276DEA2"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+        uuid: "transactions_userRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.userRepository"
+        name: "findByAccountNumber"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getAccountNumber1"
+            valueType: "java.lang.String"
+            uuid: "transactions_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByAccountNumber(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "MOCK"
+              valueType: "java.lang.Object"
+              uuid: "transactions_optional1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "java.lang.Object"
+          uuid: "transactions_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "receiver"
+      modelFingerprint: "2763E9C8DCD83AFAFF6611A832F94217"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "receiver"
+        name: "getAccountNumber"
+        parameters: []
+        signature: "getAccountNumber(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getAccountNumber1"
+          valueType: "java.lang.String"
+          uuid: "transactions_string2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "userRepository"
+      modelFingerprint: "112D45292387C2C1C24D80FC821DB1CC"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+        uuid: "transactions_userRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.userRepository"
+        name: "findByAccountNumber"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getAccountNumber1"
+            valueType: "java.lang.String"
+            uuid: "transactions_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByAccountNumber(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "MOCK"
+              valueType: "java.lang.Object"
+              uuid: "transactions_optional2-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "java.lang.Object"
+          uuid: "transactions_optional2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "sender"
+      modelFingerprint: "D9D6DE7A933075DFA5DDF50C820766DB"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "sender"
+        name: "getBalance"
+        parameters: []
+        signature: "getBalance(): double"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 0.0
+          suggestedContent: !<regular>
+            value: 0.0
+          valueType: "double"
+          uuid: "transactions_double2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "sender"
+      modelFingerprint: "D9D6DE7A933075DFA5DDF50C820766DB"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "sender"
+        name: "getBalance"
+        parameters: []
+        signature: "getBalance(): double"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 0.0
+          suggestedContent: !<regular>
+            value: 0.0
+          valueType: "double"
+          uuid: "transactions_double4"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "sender"
+      modelFingerprint: "079A534757A17AEA7CB883C6B196746F"
+      index: 11
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "sender"
+        name: "setBalance"
+        parameters:
+        - name: "balance"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0.0
+            suggestedContent: !<regular>
+              value: 0.0
+            valueType: "double"
+            uuid: "transactions_double6"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setBalance(double): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "receiver"
+      modelFingerprint: "D9D6DE7A933075DFA5DDF50C820766DB"
+      index: 12
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "receiver"
+        name: "getBalance"
+        parameters: []
+        signature: "getBalance(): double"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 0.0
+          suggestedContent: !<regular>
+            value: 0.0
+          valueType: "double"
+          uuid: "transactions_double7"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "receiver"
+      modelFingerprint: "079A534757A17AEA7CB883C6B196746F"
+      index: 13
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "receiver"
+        name: "setBalance"
+        parameters:
+        - name: "balance"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0.0
+            suggestedContent: !<regular>
+              value: 0.0
+            valueType: "double"
+            uuid: "transactions_double9"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "setBalance(double): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "accountRepository"
+      modelFingerprint: "8BCC6205ABD90CDCA520C61CF302958A"
+      index: 14
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+        uuid: "getBalance_accountRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.accountRepository"
+        name: "save"
+        parameters:
+        - value:
+            sapientType: "MOCK"
+            valueType: "com.fullstack.project_fullstack.model.Account"
+            uuid: "transactions_account1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "save(Account): Object"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "java.lang.Object"
+          uuid: "transactions_object1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "accountRepository"
+      modelFingerprint: "8BCC6205ABD90CDCA520C61CF302958A"
+      index: 15
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+        uuid: "getBalance_accountRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.accountRepository"
+        name: "save"
+        parameters:
+        - value:
+            sapientType: "MOCK"
+            valueType: "com.fullstack.project_fullstack.model.Account"
+            uuid: "transactions_account2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "save(Account): Object"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "java.lang.Object"
+          uuid: "transactions_object2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "sender"
+      modelFingerprint: "2763E9C8DCD83AFAFF6611A832F94217"
+      index: 16
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "sender"
+        name: "getAccountNumber"
+        parameters: []
+        signature: "getAccountNumber(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getAccountNumber1"
+          valueType: "java.lang.String"
+          uuid: "transactions_string3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "receiver"
+      modelFingerprint: "2763E9C8DCD83AFAFF6611A832F94217"
+      index: 17
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "receiver"
+        name: "getAccountNumber"
+        parameters: []
+        signature: "getAccountNumber(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getAccountNumber1"
+          valueType: "java.lang.String"
+          uuid: "transactions_string4"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "transactionService"
+      modelFingerprint: "A6655887AE3282AC4F8FC0AA6C59B8BE"
+      index: 18
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.Services.TransactionService"
+        uuid: "transactions_transactionService1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.transactionService"
+        name: "createTransaction"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "com.fullstack.project_fullstack.model.Transaction"
+              parameters:
+              - name: "senderAccountNumber"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "return_of_getAccountNumber1"
+                  valueType: "java.lang.String"
+                  uuid: "transactions_string3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "receiverAccountNumber"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "return_of_getAccountNumber1"
+                  valueType: "java.lang.String"
+                  uuid: "transactions_string4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "amount"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0.0
+                  valueType: "double"
+                  uuid: "transactions_double10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+            suggestedContent: !<new>
+              target: "com.fullstack.project_fullstack.model.Transaction"
+              parameters:
+              - name: "senderAccountNumber"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "java.lang.String"
+                  uuid: "transactions_string3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "receiverAccountNumber"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "java.lang.String"
+                  uuid: "transactions_string4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "amount"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "double"
+                  uuid: "transactions_double10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+            valueType: "com.fullstack.project_fullstack.model.Transaction"
+            uuid: "transactions_transaction1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "createTransaction(Transaction): Transaction"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "com.fullstack.project_fullstack.model.Transaction"
+          uuid: "transactions_transaction2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 19
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "0d990467-f932-39a8-a9b2-39944e76f744"
+    deleted: false
+    disabled: false
+  - pathId: "path3"
+    pathIdForUser: "path4"
+    testPathName: "transactionsWhenSenderGetBalanceLessThanAmountThrowsInsufficientBalanceException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D792959BEBA1482EAC1D21343761C9DE"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            userRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+              uuid: "transactions_userRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "sender"
+      modelFingerprint: "4389988EC9048BA71FD4CF16594B4757"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "receiver"
+      modelFingerprint: "D6BCCC817F475ABBA5E4590578B27075"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "amount"
+      modelFingerprint: "0A3D2731A6D32217742018D406EC41CC"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0.5
+        suggestedContent: !<regular>
+          value: 0.5
+        valueType: "java.lang.Double"
+        uuid: "transactions_double1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "sender"
+      modelFingerprint: "2763E9C8DCD83AFAFF6611A832F94217"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "sender"
+        name: "getAccountNumber"
+        parameters: []
+        signature: "getAccountNumber(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getAccountNumber1"
+          valueType: "java.lang.String"
+          uuid: "transactions_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "userRepository"
+      modelFingerprint: "BEAB9E5527162FE61D79EC3D2276DEA2"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+        uuid: "transactions_userRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.userRepository"
+        name: "findByAccountNumber"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getAccountNumber1"
+            valueType: "java.lang.String"
+            uuid: "transactions_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByAccountNumber(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "MOCK"
+              valueType: "java.lang.Object"
+              uuid: "transactions_optional1-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "java.lang.Object"
+          uuid: "transactions_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "receiver"
+      modelFingerprint: "2763E9C8DCD83AFAFF6611A832F94217"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "receiver"
+        name: "getAccountNumber"
+        parameters: []
+        signature: "getAccountNumber(): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_getAccountNumber1"
+          valueType: "java.lang.String"
+          uuid: "transactions_string2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "userRepository"
+      modelFingerprint: "112D45292387C2C1C24D80FC821DB1CC"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.UserRepository"
+        uuid: "transactions_userRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.userRepository"
+        name: "findByAccountNumber"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getAccountNumber1"
+            valueType: "java.lang.String"
+            uuid: "transactions_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByAccountNumber(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "MOCK"
+              valueType: "java.lang.Object"
+              uuid: "transactions_optional2-value"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "java.lang.Object"
+          uuid: "transactions_optional2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "LOCAL_VARIABLE"
+      name: "sender"
+      modelFingerprint: "D9D6DE7A933075DFA5DDF50C820766DB"
+      index: 9
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "transactions_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "sender"
+        name: "getBalance"
+        parameters: []
+        signature: "getBalance(): double"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: 0.25
+          suggestedContent: !<regular>
+            value: 0.25
+          valueType: "double"
+          uuid: "transactions_double2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 10
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.exception.InsufficientBalanceException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "You don't have enough balance"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        suggestedContent: !<new>
+          target: "com.fullstack.project_fullstack.exception.InsufficientBalanceException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "You don't have enough balance"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "com.fullstack.project_fullstack.exception.InsufficientBalanceException"
+        uuid: "transactions_insufficientBalanceException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "cb8e2cdb-170b-3bec-a344-c248f1a84204"
+    deleted: false
+    disabled: false
+- method:
+    name: "addMoney"
+    returnType: "void"
+    signature: "addMoney(java.lang.String,double) : void"
+    parametersTypes:
+    - "java.lang.String"
+    - "double"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "addMoneyWhenAccountIsNullThrowsAccountNotFoundException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "6166F006D23C179389559C979B4A1B97"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "fb9f2490-ca8e-36ff-9fbd-6e836730d3b8"
+    deleted: false
+    disabled: false
+- method:
+    name: "updateBalance"
+    returnType: "void"
+    signature: "updateBalance(java.lang.String,double) : void"
+    parametersTypes:
+    - "java.lang.String"
+    - "double"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "updateBalanceWhenAccountIsNullThrowsAccountNotFoundException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "139BC8B8996507143785875EA0557B40"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            accountRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+              uuid: "getBalance_accountRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "accountNumber"
+      modelFingerprint: "9936449C0FF7E2C6CED9410A80402730"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "A"
+        suggestedContent: !<regular>
+          value: "A"
+        valueType: "java.lang.String"
+        uuid: "updateBalance_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "newBalance"
+      modelFingerprint: "FE4D2C451A9CB84177A06B32654CCC1A"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 0.0
+        valueType: "double"
+        uuid: "updateBalance_double1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "accountRepository"
+      modelFingerprint: "0213808294C00854B7C371885E3DF58E"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+        uuid: "getBalance_accountRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.accountRepository"
+        name: "findByAccountNumber"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            suggestedContent: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "updateBalance_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByAccountNumber(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "NULL"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "com.fullstack.project_fullstack.model.Account"
+          uuid: "updateBalance_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.exception.AccountNotFoundException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Account not found for user ID: A"
+              suggestedContent: !<regular>
+                value: "Account not found for user ID: A"
+              valueType: "java.lang.String"
+              uuid: "updateBalance_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        suggestedContent: !<new>
+          target: "com.fullstack.project_fullstack.exception.AccountNotFoundException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "Account not found for user ID: A"
+              valueType: "java.lang.String"
+              uuid: "updateBalance_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "com.fullstack.project_fullstack.exception.AccountNotFoundException"
+        uuid: "updateBalance_accountNotFoundException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "ef15a26d-981e-3f2d-b837-750479ae8cd2"
+    deleted: false
+    disabled: false
+- method:
+    name: "getByAccountNumber"
+    returnType: "com.fullstack.project_fullstack.model.Account"
+    signature: "getByAccountNumber(java.lang.String) : com.fullstack.project_fullstack.model.Account"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path2"
+    pathIdForUser: "path1"
+    testPathName: "getByAccountNumberWhenOptionalAccountNotIsPresentThrowsAccountNotFoundException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "A029E2691DAF390F2F718E592DA93396"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            accountRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+              uuid: "getBalance_accountRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "accountNumber"
+      modelFingerprint: "9936449C0FF7E2C6CED9410A80402730"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "B"
+        suggestedContent: !<regular>
+          value: "B"
+        valueType: "java.lang.String"
+        uuid: "getByAccountNumber_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "accountRepository"
+      modelFingerprint: "0517C02693A83505DF0B9FC4C4DE44D5"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+        uuid: "getBalance_accountRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.accountRepository"
+        name: "findByAccountNumber"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "B"
+            suggestedContent: !<regular>
+              value: "B"
+            valueType: "java.lang.String"
+            uuid: "getByAccountNumber_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByAccountNumber(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "NULL"
+              valueType: "com.fullstack.project_fullstack.model.Account"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "com.fullstack.project_fullstack.model.Account"
+          uuid: "getByAccountNumber_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.exception.AccountNotFoundException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Account not found with Account Number: B"
+              suggestedContent: !<regular>
+                value: "Account not found with Account Number: B"
+              valueType: "java.lang.String"
+              uuid: "getByAccountNumber_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        suggestedContent: !<new>
+          target: "com.fullstack.project_fullstack.exception.AccountNotFoundException"
+          parameters:
+          - name: "message"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "Account not found with Account Number: B"
+              valueType: "java.lang.String"
+              uuid: "getByAccountNumber_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+        valueType: "com.fullstack.project_fullstack.exception.AccountNotFoundException"
+        uuid: "getByAccountNumber_accountNotFoundException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "7185d2ca-966d-3fce-a876-e0b58061009f"
+    deleted: false
+    disabled: false
+  - pathId: "path1"
+    pathIdForUser: "path2"
+    testPathName: "getByAccountNumberWhenOptionalAccountIsPresent"
+    nameDefinedByUser: false
+    constructorSignature: "<init>() : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "B33CE8F4BA7D85839F96D53EF7AF8317"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BCD8B0C2EB1FCE714EAB6CEF0D771ACC"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+          parameters: []
+          privateConstructor: false
+          propertiesMap:
+            accountRepository:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+              uuid: "getBalance_accountRepository1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "com.fullstack.project_fullstack.Services.AccountServiceImpl"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "INPUT"
+      name: "accountNumber"
+      modelFingerprint: "9936449C0FF7E2C6CED9410A80402730"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "accountNumber1"
+        valueType: "java.lang.String"
+        uuid: "getByAccountNumber_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    - type: "FIELD"
+      name: "accountRepository"
+      modelFingerprint: "A1D0BBE512E0D5EB3B14652EC7A7747C"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.repository.AccountRepository"
+        uuid: "getBalance_accountRepository1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.accountRepository"
+        name: "findByAccountNumber"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "accountNumber1"
+            valueType: "java.lang.String"
+            uuid: "getByAccountNumber_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findByAccountNumber(String): Optional"
+        returnValue:
+          sapientType: "OPTIONAL"
+          content: !<optional>
+            value:
+              sapientType: "MOCK"
+              valueType: "com.fullstack.project_fullstack.model.Account"
+              uuid: "getByAccountNumber_account1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            target: "java.util.Optional"
+          valueType: "java.util.Optional"
+          genericValueType: "com.fullstack.project_fullstack.model.Account"
+          uuid: "getByAccountNumber_optional1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+    - type: "RESULT"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "com.fullstack.project_fullstack.model.Account"
+        uuid: "getByAccountNumber_account1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+    uuid: "f0873986-d776-3779-a10f-3838df25d802"
+    deleted: false
+    disabled: false
